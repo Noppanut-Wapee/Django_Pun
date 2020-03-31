@@ -4,7 +4,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def hello(request):
-    return render(request,'index.html')
+    tags =('น้ำตก','ภูเขา','ทะเล','ตากหมอก','ปีนเขา')
+    return render(request,'index.html',
+    {
+    'name':'บทความท่องเที่ยว',
+    'author':'Noppanut',
+    'tags': tags
+     })
     
 
 
