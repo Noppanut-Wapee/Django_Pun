@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Framwork</title>
-</head>
-<body>
-    <h2>Homepage</h2>
-    <p>Noppanut Learn django</p>
-    <h1> ชื่อ {{ name }} ผู้แต่งโดย {{ author }} </h1>
+{% extends 'layout.html' %} 
 
-    <h2>ป้ายกำกับของคุณ</h2>
-    <ul>
-        {%for i in tags%}
-        <li>{{ i }}</li>
-        {%endfor%}
-    </ul>
+{% block content%}
 
+<h2>Homepage</h2>
+<p>Noppanut Learn django</p>
+<h1> ชื่อ {{ name }} ผู้แต่งโดย {{ author }} </h1>
 
-
-    
-</body>
-</html>
+<h2>ป้ายกำกับของคุณ</h2>
+<ul>
+    {%for i in tags%}
+    <li>{{ i }}</li>
+    {%endfor%}
+<h2>ความนิยม บทความ</h2>
+        {% if rating >= 3 %}
+        <h2>บทความคนนิยมมาก</h2>
+        {% else %}
+        <h2>ไม่ค่อยได้รับความนิยม</h2>
+        {% endif %}
+{%endblock%}
