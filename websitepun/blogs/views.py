@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def hello(request):
+def index(request):
     tags =('น้ำตก','ภูเขา','ทะเล','ตากหมอก','ปีนเขา')
     rating = 3
     return render(request,'index.html',
@@ -16,5 +16,9 @@ def hello(request):
     
 def page1(request):
     
-    return render(request,'page1.html',{'a':'Hello Noppanut!!'})
+    return render(request,'page1.html',{'a':'Hello page1 Noppanut!!'})
+
+def page2(request):
+
+    return render(request,'page2.html',{'b':'Hello Page2 Noppanut!!'})
 

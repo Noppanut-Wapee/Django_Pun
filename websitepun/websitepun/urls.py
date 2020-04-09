@@ -19,6 +19,7 @@ from blogs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.hello,name='Home'),
-    path('page1',views.page1)
+    path('index',views.index),
+    path('page1',views.page1),
+    path('page2',views.page2)
 ]
