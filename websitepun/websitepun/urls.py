@@ -22,6 +22,7 @@ urlpatterns = [
     path('index',views.index),
     path('page1',views.page1),
     #path('page2',views.page2),
-    path('createForm',views.createForm)
+    path('createForm',views.createForm),
+    path('addForm',views.addBlog)
 
 ]

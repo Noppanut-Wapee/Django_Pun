@@ -26,3 +26,6 @@ def createForm(request):
 
     return render(request,'createForm.html',{'b':'Hello Page2 Noppanut!!'})
 
+def addBlog(request):
+    return render(request,'result.html')
+
