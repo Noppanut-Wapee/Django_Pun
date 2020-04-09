@@ -1,0 +1,22 @@
+
+{% extends 'layout.html' %} 
+{% block content %}
+
+    <h2 align='center'> {{b}} </h2>
+    <form action="" method="get">
+
+        <div class = 'form-group'>
+            <label for="">ชื่อบทความ</label>
+            <input type="text" class = 'form-control' name = 'name'>        
+        </div>
+
+        <div class = 'form-group'>
+            <label for="">รายละเอียด</label>
+            <input type="text" class = 'form-control' name = 'description'>
+        </div>
+
+        <input type="submit" value="บันทึกบทความ">
+    </form>
+
+{% endblock %}
+

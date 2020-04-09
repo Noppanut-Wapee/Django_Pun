@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index',views.index),
     path('page1',views.page1),
-    path('page2',views.page2)
+    #path('page2',views.page2),
+    path('createForm',views.createForm)
+
 ]

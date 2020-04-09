@@ -18,7 +18,11 @@ def page1(request):
     
     return render(request,'page1.html',{'a':'Hello page1 Noppanut!!'})
 
-def page2(request):
+#def page2(request):
 
-    return render(request,'page2.html',{'b':'Hello Page2 Noppanut!!'})
+ #   return render(request,'page2.html',{'b':'Hello Page2 Noppanut!!'})
+
+def createForm(request):
+
+    return render(request,'createForm.html',{'b':'Hello Page2 Noppanut!!'})
 
