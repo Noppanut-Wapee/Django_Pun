@@ -27,5 +27,7 @@ def createForm(request):
     return render(request,'createForm.html',{'b':'Hello Page2 Noppanut!!'})
 
 def addBlog(request):
-    return render(request,'result.html')
+    name = request.GET['name']
+    description = request.GET['description']
+    return render(request,'result.html',{'name':name,'description':description})
 
