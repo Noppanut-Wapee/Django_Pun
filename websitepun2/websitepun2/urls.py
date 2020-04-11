@@ -1,4 +1,4 @@
-"""websitepun URL Configuration
+"""websitepun2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,16 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blogs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('index',views.index),
-    #path('page1',views.page1),
-    #path('page2',views.page2),
-    #path('createForm',views.createForm),
-    #path('addForm',views.addBlog)
-   
 ]
-
-
