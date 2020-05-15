@@ -1,5 +1,6 @@
 from django.shortcuts import render # ดึงมาจาก  template
 from django.http import HttpResponse #เขียนเอง
+from .models import Customer
 
 def HomePage(request):
     #return HttpResponse('<h1> Hello World Pun</h1>')
@@ -12,3 +13,8 @@ def AboutPage(request):
 
 def ContactUs(request):
     return render(request,'csmuk/contactus.html')
+
+def Showcustomer(request):
+    customer_all = Customer.objects.all() #ดึงค่าจาก database ทั้งหมด
+    context = {'customer_all':customer_all}
+    return render(request,'csmuk/showcustomer.html', context)
