@@ -1,11 +1,11 @@
 from django.db import models
 
 class Customer(models.Model):
-    allsubject = (('City','ในเมือง'),
-                  ('Suburb','นอกเขตเมือง'))
+    allsubject = (('ในเมือง','ในเมือง'),
+                  ('นอกเขตเมือง','นอกเขตเมือง'))
 
 
-    customer_subject = models.CharField(max_length=200, choices=allsubject, default='city')
+    customer_subject = models.CharField(max_length=200, choices=allsubject, default='ในเมือง')
     customer_name = models.CharField(max_length=200)
     customer_id = models.IntegerField(default=0)
 
