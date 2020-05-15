@@ -1,14 +1,20 @@
 {% extends 'csmuk/base.html'%}
 
 {% block content %}
-<center>
+
 <div class="container">
-    <table>
+  <center>
+   
+    <table style="width:100%;">
       <tr><th>เขตพื้นที่อยู่อาศัย</th><th>ชื่อผู้ใช้ไฟ</th><th>หมายเขตผู้ใช้ไฟ</th></tr>
-      <tr><td>city</td><td>กก</td><td>1234</td></tr>
+      {% for cm in customer_all%}
+
+      <tr><td>{{cm.customer_subject}}</td><td>{{cm.customer_name}}</td><td>{{cm.customer_id}}</td></tr>
+      {% endfor %}
     </table>
+  </center>
 </div>
-</center>
+
 
 {% endblock content %}
 
