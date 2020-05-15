@@ -82,8 +82,14 @@
 
     </ul>
     <div>
-      <a class="btn btn-primary" href='%url "register-page"%'>Register</a>
-      <a class="btn btn-primary" href=''>Login</a>
+        {% if user.is_authenticated %}
+          <p style="color:whitesmoke">คุณ&nbsp{{user.first_name}}&nbsp{{user.last_name}}
+          &nbsp<a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
+        </p>
+        {% else %}
+         <a class="btn btn-primary" href="{% url 'register-page' %}">Register</a>
+         <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+        {% endif %}
     </div>
   </div>
 </nav>

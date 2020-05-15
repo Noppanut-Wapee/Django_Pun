@@ -25,14 +25,14 @@ def Showcustomer(request):
 def Register(request):
     if request.method == 'POST':
         data = request.POST.copy()
-        frist_name = data.get('frist_name')
+        first_name = data.get('first_name')
         last_name = data.get('last_name')
         email = data.get('email')
         password = data.get('password')
 
         newuser = User()
         newuser.username = email
-        newuser.first_name = frist_name
+        newuser.first_name = first_name
         newuser.last_name = last_name
         newuser.email = email
         newuser.set_password(password)
